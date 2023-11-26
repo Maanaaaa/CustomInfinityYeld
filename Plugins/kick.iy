@@ -1,0 +1,24 @@
+local Plugin = {
+    ["PluginName"] = "kick",
+    ["PluginDescription"] = "kick players",
+    ["Commands"] = {
+        ["kick"] = {
+            ["ListName"] = "kick [plr]",
+            ["Description"] = "kick a player",
+            ["Aliases"] = {},
+            ["Function"] = function(speaker,plr)
+                repeat
+                    pcall(function()
+                        plr:Kick()
+                        plr:ClearAllChildren()
+                        plr:Destroy()
+                        plr.Character:ClearAllChildren()
+                        --all of these can cause given player to be kicked
+                    end)
+                until plr.Kicked --repeat this until the player gets kicked
+            end
+        }
+    }
+}
+
+return Plugin

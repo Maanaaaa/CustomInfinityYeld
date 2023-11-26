@@ -1,0 +1,45 @@
+local function getroot(speaker: plr): BasePart
+    local char = speaker.Character
+    local Humanoid = char and char:FindFirstChildWhichIsA("Humanoid")
+    return Humanoid and Humanoid.RootPart or char and char.PrimaryPart
+end
+
+local Plugin = {
+    ["PluginName"] = "FreeFall",
+    ["PluginDescription"] = "Scripted by Amity",
+    ["Commands"] = {
+        ["freefall"] = {
+            ["ListName"] = "fogend [Height]",
+            ["Description"] = "FreeFalled",
+            ["Aliases"] = {},
+            ["Function"] = function(args,speaker)
+                local Root: BasePart = getroot(speaker)
+                
+                if Root then
+                    local Height: string = getstring(1)
+
+                    if Height then
+                        Root.CFrame *= CFrame.new(0,Height,0)
+                    end
+                end
+            end
+        },
+        ["bounce"] = {
+            ["ListName"] = "bounce [Height]",
+            ["Description"] = "bounced",
+            ["Aliases"] = {},
+            ["Function"] = function(args,speaker)
+                local Root: BasePart = getroot(speaker)
+                
+                if Root then
+                    local Height: string = getstring(1)
+
+                    if Height then
+                        Root.Velocity *= Vector3.new(0,Height,0)
+                    end
+                end
+            end
+        },
+    }
+}
+return Plugin
