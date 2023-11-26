@@ -6029,8 +6029,6 @@ function addPlugin(name)
 			else
 				notify('Plugin Error','This plugin is already added')
 			end
-		elseif game:HttpGet("https://raw.githubusercontent.com/Maanaaaa/CustomInfinityYeld/main/Plugins/".. fileName) then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Maanaaaa/CustomInfinityYeld/main/Plugins/".. fileName))
         else
 			notify('Plugin Error','Cannot find plugin: "'..fileName..'". Is the file in the correct folder? Or does it exist?')
 		end
