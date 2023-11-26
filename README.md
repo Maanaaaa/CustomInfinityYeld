@@ -1,1 +1,1 @@
-Custom infninity yeld with installed plugins
+Custom infninity yeld
