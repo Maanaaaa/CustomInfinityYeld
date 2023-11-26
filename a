@@ -207,7 +207,7 @@ Title.BorderSizePixel = 0
 Title.Size = UDim2.new(0, 250, 0, 20)
 Title.Font = Enum.Font.SourceSans
 Title.TextSize = 18
-Title.Text = "Infinite Yield FE v" .. currentVersion
+Title.Text = "Custom Infinite Yeld FE v" .. currentVersion
 
 do
 	local emoji = ({
@@ -4258,6 +4258,7 @@ CMDs[#CMDs + 1] = {NAME = 'olddex / odex', DESC = 'Opens Old DEX by Moon'}
 CMDs[#CMDs + 1] = {NAME = 'remotespy / rspy', DESC = 'Opens Simple Spy V3'}
 CMDs[#CMDs + 1] = {NAME = 'audiologger / alogger', DESC = 'Opens Edges audio logger'}
 CMDs[#CMDs + 1] = {NAME = 'serverinfo / info', DESC = 'Gives you info about the server'}
+CMDs[#CMDs + 1] = {NAME = 'Synapse x', DESC = 'Opens Synapse X'}
 CMDs[#CMDs + 1] = {NAME = 'jobid', DESC = 'Copies the games JobId to your clipboard'}
 CMDs[#CMDs + 1] = {NAME = 'notifyjobid', DESC = 'Notifies you the games JobId'}
 CMDs[#CMDs + 1] = {NAME = 'rejoin / rj', DESC = 'Makes you rejoin the game'}
@@ -6628,6 +6629,10 @@ end)
 
 addcmd('Fluxus',{},function(args, speaker)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/anyahubs/executer/main/fluxus-remake.lua"))()
+end)
+
+addcmd('Synapse',{`Syn`, `Synapse X`, `Syn X`, `X`},function(args, speaker)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/fortnitemodder/SYNAPSE/main/2022workinglegit'))() 
 end)
 
 addcmd('jobid',{},function(args, speaker)
