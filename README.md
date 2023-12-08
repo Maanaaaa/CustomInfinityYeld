@@ -1,4 +1,5 @@
-Custom infninity yeld
+# Custom infninity yeld
+works on emulators + mobile devices and pc
 
 loadstring:
 
